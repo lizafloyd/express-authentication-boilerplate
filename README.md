@@ -9,7 +9,7 @@ If you get a permissions error related to the `/data/db` directory it may be nec
 For security purposes you'll also need to adjust the secret value found within `config.js`. Leaving it as its default value is **highly unrecommended**.
 
 ## Endpoints
-There's two POST endpoints that are provided.
+There's two POST endpoints that are provided and one GET endpoint.
 
 ### Signup
 The  `/signup` endpoint expects a JSON object containing both an email address and password, once recieved it encrypts and stores the information in the database and returns a token. If you attempt to signup with an email that already exists in the database the server will reject it and return an error.
@@ -26,3 +26,9 @@ Below is an example of the type of JSON object the endpoints expect.
   "password": "1323"
 }
 ```
+
+### Private
+If authenticated you're able make a GET request to `/private` to get a piece of data returned from the server. 
+
+## Client
+Within the `client` directory of this repository is a simple React application that makes use of this boilerplate and its endpoints. To install it please visit the provided [readme file](client/README.md).

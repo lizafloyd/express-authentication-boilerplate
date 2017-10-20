@@ -1,12 +1,12 @@
 # Express Authentication Boilerplate
-This is a simple authentication boilerplate made with NodeJS using Express and MongoDB. This application allows you to make a POST request to either a sign-in or sign-up endpoint allowing you to register, and re-auth with the service. Both endpoints return a JSON Web Token (JWT).
+Basic user authentication boilerplate made with NodeJS using Express and MongoDB. This application allows you to make a POST request to either a signin or signup endpoint allowing you to register, and re-authenticate. Both endpoints return a [JSON Web Token (JWT)](https://jwt.io/) which can be used in a Front-End application.
 
 ## Getting Started
-This application can be installed via npm by running `npm install`. You'll need to also install MongoDB for the database hich will hold your users. With both installed run `mongod` first followed by `node index.js` to start the server. By default the server runs on port `3090`. 
+This application can be installed via npm by running `npm install`. You'll need to also install [MongoDB](https://www.mongodb.com/) for the database which will store your users. With both installed run `mongod` first followed by `node index.js` to start the server on port `3090`. 
 
 If you get a permissions error related to the `/data/db` directory it may be neccersary to run the command listed [here](data/db/README.md).
 
-For security purposes you'll also want to adjust the secret value found within `config.js`. Leaving it as its default value is highly unrecommended. 
+For security purposes you'll also need to adjust the secret value found within `config.js`. Leaving it as its default value is **highly unrecommended**.
 
 ## Endpoints
 There's two POST endpoints that are provided.
@@ -16,13 +16,13 @@ The  `/signup` endpoint expects a JSON object containing both an email address a
 
 
 ### Signin
-The `/signin` endpoint also expects a JSON object containing both an email address and password, once recieved it checks if the user exists and if the provided password matches that of the one in the database. If it doesn't the server will reject the sign-in request and return an unauthorized error. If it does match the server will return a token.
+The `/signin` endpoint also expects a JSON object containing both an email address and password, once recieved it checks if the user exists and if the provided password matches that of the one in the database. If it doesn't the server will reject the signin request and return an unauthorized error. If it does match the server will return a token.
 
 Below is an example of the type of JSON object the endpoints expect.
 
 ```
 {
-"email": "example@example.com",
-"password": "1323"
+  "email": "example@example.com",
+  "password": "1323"
 }
 ```

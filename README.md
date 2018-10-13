@@ -4,7 +4,7 @@ This is a basic user authentication boilerplate made with [NodeJS](https://nodej
 ## Getting Started
 This application can be installed via npm by running `npm install`. You'll need to also install [MongoDB](https://www.mongodb.com/) for the database which will store your users. With both installed run `mongod` first followed by `node index.js` to start the server on port `3090`. 
 
-If you get a permissions error related to the `/data/db` directory it may be neccersary to run the command listed [here](data/db/README.md).
+If you get a permissions error related to the `/data/db` directory it may be necessary to run the command listed [here](data/db/README.md).
 
 For security purposes you'll also need to adjust the `secret` value found within `config.js`. Leaving it as its default value is **highly unrecommended**.
 

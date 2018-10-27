@@ -4,7 +4,7 @@ This is a basic user authentication boilerplate made with [NodeJS](https://nodej
 ## Getting Started
 This application can be installed via npm by running `npm install`. You'll need to also install [MongoDB](https://www.mongodb.com/) for the database which will store your users. With both installed run `mongod` first, followed by `node index.js` to start the server on port `3090`.
 
-If you get a permissions error related to the `/data/db` directory it may be necessary to run the command listed [here](data/db/README.md).
+If you get a permissions error related to the `/data/db` directory, it may be necessary to run the command listed [here](data/db/README.md).
 
 For security purposes you'll also need to adjust the `secret` value found within `config.js`. Leaving it as its default value is **highly unrecommended**.
 
@@ -12,10 +12,10 @@ For security purposes you'll also need to adjust the `secret` value found within
 There's two POST endpoints that are provided and one GET endpoint.
 
 ### Signup
-The  `/signup` endpoint expects a JSON object containing both an email address and password, once recieved it encrypts and stores the information in the database and returns a token. If you attempt to signup with an email that already exists in the database the server will reject it and return an error.
+The  `/signup` endpoint expects a JSON object containing both an email address and password, once received it encrypts and stores the information in the database and returns a token. If you attempt to signup with an email that already exists in the database the server will reject it and return an error.
 
 ### Signin
-The `/signin` endpoint also expects a JSON object containing both an email address and password, once recieved it checks if the user exists and if the provided password matches that of the one in the database. If it doesn't the server will reject the signin request and return an unauthorized error. If it does match the server will return a token.
+The `/signin` endpoint also expects a JSON object containing both an email address and password, once received it checks if the user exists and if the provided password matches that of the one in the database. If it doesn't the server will reject the sign-in request and return an unauthorized error. If it does match the server will return a token.
 
 Below is an example of the type of JSON object the endpoints expect.
 

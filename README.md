@@ -1,8 +1,8 @@
 # Express Authentication Boilerplate
-This is a basic user authentication boilerplate made with [NodeJS](https://nodejs.org/en/) using [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/). This application allows you to make a POST request to either a signin or signup endpoint allowing you to register, and re-authenticate. Both endpoints return a [JSON Web Token (JWT)](https://jwt.io/) which can be used in a Front-End application.
+This is a basic user authentication boilerplate made with [NodeJS](https://nodejs.org/en/) using [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/). This application allows you to make a POST request to either a sign-in or signup endpoint allowing you to register, and re-authenticate. Both endpoints return a [JSON Web Token (JWT)](https://jwt.io/) which can be used in a Front-End application.
 
 ## Getting Started
-This application can be installed via npm by running `npm install`. You'll need to also install [MongoDB](https://www.mongodb.com/) for the database which will store your users. With both installed run `mongod` first followed by `node index.js` to start the server on port `3090`. 
+This application can be installed via npm by running `npm install`. You'll need to also install [MongoDB](https://www.mongodb.com/) for the database which will store your users. With both installed run `mongod` first, followed by `node index.js` to start the server on port `3090`.
 
 If you get a permissions error related to the `/data/db` directory it may be necessary to run the command listed [here](data/db/README.md).
 
